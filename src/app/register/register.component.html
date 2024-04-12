@@ -1,0 +1,32 @@
+<div class="container">
+  <h3 class="my-3">Registration</h3>
+  <div *ngIf="accountRegistered" class="alert alert-success">
+    Account registered! Redirecting to login...
+  </div>
+  <div class="mb-3">
+    <label for="emailInput" class="form-label">Email address</label>
+    <input 
+      style="width: 400px;"
+      type="email"
+      class="form-control"
+      id="emailInput" 
+      placeholder="Enter your email"
+      [(ngModel)]="email"
+      >
+  </div>
+  <div class="mb-3">
+    <label for="passwordInput" class="form-label">Password</label>
+    <input
+      style="width: 400px;"
+      type="password"
+      class="form-control"
+      id="passwordInput"
+      placeholder="Enter a password"
+      [(ngModel)]="password"
+    >
+  </div>
+  <p style="font-size: 12px;" >Already have an account? Login <a routerLink="/login">here</a></p>
+  <button class="btn btn-primary"
+    (click)="registerAccount()"
+  >Register</button>
+</div>

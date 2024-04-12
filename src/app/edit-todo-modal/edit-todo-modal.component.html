@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Edit Todo</h1>
+<div mat-dialog-content>
+  <p>Title: <input [(ngModel)]="data.title"></p>
+  <p>Description: <input [(ngModel)]="data.description"></p>
+  <p>Completed: <input type="checkbox" [(ngModel)]="data.completed"></p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Update</button>
+</div>
