@@ -7,10 +7,15 @@ import { Todos } from '../model/todos';
   templateUrl: './edit-todo-modal.component.html',
 })
 export class EditTodoModalComponent {
+
+  updatedData!:Todos;
+
   constructor(
     public dialogRef: MatDialogRef<EditTodoModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Todos
-  ) {}
+  ) {
+    this.updatedData = {...data}
+  }
 
   onNoClick(): void {
     this.dialogRef.close();

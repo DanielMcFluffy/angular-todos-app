@@ -40,7 +40,7 @@ export class TodosListComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       this.isDialogOpen = false;
       if (result) {
-        // this.todosService.update(result);
+        this.todosService.update(result);
         this.todos = this.todosService.todos;
       }
     });

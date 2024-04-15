@@ -33,4 +33,11 @@ export class TodosService {
   
   }
 
+  update(updatedTodo: Todos): void {
+    const index = this.todos.findIndex(todo => todo.id === updatedTodo.id);
+    if (index !== -1) {
+      this.todos[index] = updatedTodo;
+    }
+  }
+
 }
