@@ -1,4 +1,4 @@
-# React Todos App
+# Angular Todos App (Non-standalone)
 
 ## Overview
 
