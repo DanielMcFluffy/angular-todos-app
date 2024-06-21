@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Output, } from '@angular/core';
-import { Todos } from '../model/todos';
+import { Component } from '@angular/core';
 import { TodosService } from '../services/todos.service';
 
 @Component({
